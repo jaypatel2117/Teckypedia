@@ -1,0 +1,36 @@
+<!-- templates/admin_panel.html -->
+
+{% extends "base.html" %}
+{% block title %}Admin Panel{% endblock %}
+
+{% block content %}
+<div class="container mx-auto p-8">
+    <h1 class="text-4xl font-bold mb-8 text-indigo-600">Admin Panel</h1>
+
+    <form method="post" enctype="multipart/form-data">
+        <div class="mb-4">
+            <label for="name" class="block text-sm font-medium text-gray-600">Product Name</label>
+            <input type="text" id="name" name="name" class="w-full p-2 rounded-md border-0 py-2 text-gray-600 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm">
+        </div>
+
+        <div class="mb-4">
+            <label for="description" class="block text-sm font-medium text-gray-600">Product Description</label>
+            <textarea id="description" name="description" rows="4" class="w-full p-2 rounded-md border-0 py-2 text-gray-600 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"></textarea>
+        </div>
+
+        <div class="mb-4">
+            <label for="price" class="block text-sm font-medium text-gray-600">Product Price</label>
+            <input type="number" id="price" name="price" class="w-full p-2 rounded-md border-0 py-2 text-gray-600 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm">
+        </div>
+
+        <div class="mb-4">
+            <label for="file" class="block text-sm font-medium text-gray-600">Product Image</label>
+            <input type="file" id="file" name="file" class="w-full p-2 rounded-md border-0 py-2 text-gray-600 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm">
+        </div>
+
+        <div class="mt-6">
+            <button type="submit" class="w-full p-2 bg-purple-600 text-gray-50 hover:bg-purple-700 focus:outline-none focus:ring focus:border-purple-700 px-4 sm:px-5 rounded-md">Add Product</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
