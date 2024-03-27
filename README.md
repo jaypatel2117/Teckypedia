@@ -11,8 +11,6 @@ Teckypedia is an e-commerce web application built with Python Flask framework an
 - **Admin Panel:** Administrators have access to manage products, categories, brands, and user orders.
 - **Responsive Design:** The application is designed to be responsive, ensuring a seamless experience across various devices.
 
-![Home Page](home_page.png)
-
 ## Technologies Used
 
 - **Python:** Backend development using Flask, a lightweight WSGI web application framework.
@@ -22,8 +20,6 @@ Teckypedia is an e-commerce web application built with Python Flask framework an
 - **Tailwindcss:** Additional styling and layout components for frontend design.
 - **Git:** Version control system for tracking changes and collaborating with other developers.
 - **GitHub:** Hosting the repository and managing project collaboration.
-
-![Product Listing Page](product_listing_page.png)
 
 ## Getting Started
 
