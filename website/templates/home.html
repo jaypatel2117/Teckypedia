@@ -1,43 +1,228 @@
-{% extends "base.html" %}
-{% block title %}Home{% endblock %}
-{% block content %}
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+%}
 <div class="container mx-auto mt-8">
-    <h1 class="text-4xl font-bold mb-8 text-purple-600">Computer Spare Parts Store</h1>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 m-10">
-        <!-- Product Cards -->
-        <!-- Repeat the following card structure for each product -->
-        <div class="bg-white p-6 rounded-md shadow-md hover:ease-in">
-            <img src="\static\images\place-holder.jpg" alt="16 Gb Ram" class="w-full  object-cover mb-4 rounded-md">
-            <h2 class="text-xl font-semibold mb-2">16 Gb Ram</h2>
-            <p class="text-gray-600 mb-4">Generic purpose 3200 mhz 16 GB Ram </p>
-            <p class="text-lg text-purple-600 mb-4">$99.99</p>
-            <div class="flex space-x-4">
-                <button class="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 focus:outline-none focus:ring focus:border-purple-700">Add to Cart</button>
-                <button class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 focus:outline-none focus:ring focus:border-green-700">Buy Now</button>
-            </div>
-        </div>
-        <div class="bg-white p-6 rounded-md shadow-md">
-            <img src="static\images\place-holder.jpg" alt="16 Gb Ram" class="w-full  object-cover mb-4 rounded-md">
-            <h2 class="text-xl font-semibold mb-2">16 Gb Ram</h2>
-            <p class="text-gray-600 mb-4">Generic purpose 3200 mhz 16 GB Ram </p>
-            <p class="text-lg text-purple-600 mb-4">$99.99</p>
-            <div class="flex space-x-4">
-                <button class="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 focus:outline-none focus:ring focus:border-purple-700">Add to Cart</button>
-                <button class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 focus:outline-none focus:ring focus:border-green-700">Buy Now</button>
-            </div>
-        </div>
-        <div class="bg-white p-6 rounded-md shadow-md">
-            <img src="static\images\place-holder.jpg" alt="16 Gb Ram" class="w-full  object-cover mb-4 rounded-md">
-            <h2 class="text-xl font-semibold mb-2">16 Gb Ram</h2>
-            <p class="text-gray-600 mb-4">Generic purpose 3200 mhz 16 GB Ram </p>
-            <p class="text-lg text-purple-600 mb-4">$99.99</p>
-            <div class="flex space-x-4">
-                <button class="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 focus:outline-none focus:ring focus:border-purple-700">Add to Cart</button>
-                <button class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 focus:outline-none focus:ring focus:border-green-700">Buy Now</button>
-            </div>
-        </div>
-        <!-- Repeat the above structure for each product -->
+  <h1 class="text-4xl font-bold mb-8 text-purple-600">
+    Computer Spare Parts Store
+  </h1>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 m-10">
+    <!-- Product Cards -->
+    <!-- Repeat the following card structure for each product -->
+    <div class="bg-white p-6 rounded-md shadow-md hover:ease-in">
+      <img
+        src="\static\images\ram.jpg"
+        alt="16 Gb Ram"
+        class="w-full object-cover mb-4 rounded-md"
+      />
+      <h2 class="text-xl font-semibold mb-2">16 Gb Ram</h2>
+      <p class="text-gray-600 mb-4">Generic purpose 3200 mhz 16 GB Ram</p>
+      <p class="text-lg text-purple-600 mb-4">$99.99</p>
+      <div class="flex space-x-4">
+        <button
+          class="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 focus:outline-none focus:ring focus:border-purple-700"
+        >
+          Add to Cart
+        </button>
+        <button
+          class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 focus:outline-none focus:ring focus:border-green-700"
+        >
+          Buy Now
+        </button>
+      </div>
     </div>
+    <div class="bg-white p-6 rounded-md shadow-md">
+      <img
+        src="static\images\cpu.jpg"
+        alt="Ryzen 7 3700X"
+        class="w-full object-cover mb-4 rounded-md"
+      />
+      <h2 class="text-xl font-semibold mb-2">Ryzen 7 3700X</h2>
+      <p class="text-gray-600 mb-4">Ryzen 7 CPU chip with 3700X series.</p>
+      <p class="text-lg text-purple-600 mb-4">$499.99</p>
+      <div class="flex space-x-4">
+        <button
+          class="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 focus:outline-none focus:ring focus:border-purple-700"
+        >
+          Add to Cart
+        </button>
+        <button
+          class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 focus:outline-none focus:ring focus:border-green-700"
+        >
+          Buy Now
+        </button>
+      </div>
+    </div>
+    <div class="bg-white p-6 rounded-md shadow-md">
+      <img
+        src="static\images\gpu.jpg"
+        alt="16 Gb Ram"
+        class="w-full object-cover mb-4 rounded-md"
+      />
+      <h2 class="text-xl font-semibold mb-2">RTX 2080 GPU</h2>
+      <p class="text-gray-600 mb-4">Deicated RTX 2080 GPU for Desktops.</p>
+      <p class="text-lg text-purple-600 mb-4">$749.99</p>
+      <div class="flex space-x-4">
+        <button
+          class="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 focus:outline-none focus:ring focus:border-purple-700"
+        >
+          Add to Cart
+        </button>
+        <button
+          class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 focus:outline-none focus:ring focus:border-green-700"
+        >
+          Buy Now
+        </button>
+      </div>
+    </div>
+
+    <div class="bg-white p-6 rounded-md shadow-md hover:ease-in">
+      <img
+        src="\static\images\motherboard.jpg"
+        alt="16 Gb Ram"
+        class="w-full object-cover mb-4 rounded-md"
+      />
+      <h2 class="text-xl font-semibold mb-2">550 Vision Motherboard</h2>
+      <p class="text-gray-600 mb-4">
+        Vision 550 motherboard with upto 64gb 3600 mhz RAM support
+      </p>
+      <p class="text-lg text-purple-600 mb-4">$129.99</p>
+      <div class="flex space-x-4">
+        <button
+          class="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 focus:outline-none focus:ring focus:border-purple-700"
+        >
+          Add to Cart
+        </button>
+        <button
+          class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 focus:outline-none focus:ring focus:border-green-700"
+        >
+          Buy Now
+        </button>
+      </div>
+    </div>
+
+    <div class="bg-white p-6 rounded-md shadow-md">
+      <img
+        src="static\images\cabinet2.jpg"
+        alt="16 Gb Ram"
+        class="w-full object-cover mb-4 rounded-md"
+      />
+      <h2 class="text-xl font-semibold mb-2">6 Fans RGB Cabinet</h2>
+      <p class="text-gray-600 mb-4">
+        Vortex 6 Fans RGB Cabinet with Tranparent glass version.
+      </p>
+      <p class="text-lg text-purple-600 mb-4">$229.99</p>
+      <div class="flex space-x-4">
+        <button
+          class="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 focus:outline-none focus:ring focus:border-purple-700"
+        >
+          Add to Cart
+        </button>
+        <button
+          class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 focus:outline-none focus:ring focus:border-green-700"
+        >
+          Buy Now
+        </button>
+      </div>
+    </div>
+
+    <div class="bg-white p-6 rounded-md shadow-md">
+      <img
+        src="static\images\triple-monitor.jpg"
+        alt="Ryzen 7 3700X"
+        class="w-full object-cover mb-4 rounded-md"
+      />
+      <h2 class="text-xl font-semibold mb-2">Triple Montor Set</h2>
+      <p class="text-gray-600 mb-4">
+        Set of 3 24inch LG LED Monitor with 60hz refresh rate.
+      </p>
+      <p class="text-lg text-purple-600 mb-4">$699.99</p>
+      <div class="flex space-x-4">
+        <button
+          class="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 focus:outline-none focus:ring focus:border-purple-700"
+        >
+          Add to Cart
+        </button>
+        <button
+          class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 focus:outline-none focus:ring focus:border-green-700"
+        >
+          Buy Now
+        </button>
+      </div>
+    </div>
+
+    <div class="bg-white p-6 rounded-md shadow-md hover:ease-in">
+      <img
+        src="\static\images\keyboard.jpg"
+        alt="16 Gb Ram"
+        class="w-full object-cover mb-4 rounded-md"
+      />
+      <h2 class="text-xl font-semibold mb-2">Mechanical Keyboard</h2>
+      <p class="text-gray-600 mb-4">
+        Keycron k4 Mechanical Keyboard with hotswappable red switches.
+      </p>
+      <p class="text-lg text-purple-600 mb-4">$219.99</p>
+      <div class="flex space-x-4">
+        <button
+          class="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 focus:outline-none focus:ring focus:border-purple-700"
+        >
+          Add to Cart
+        </button>
+        <button
+          class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 focus:outline-none focus:ring focus:border-green-700"
+        >
+          Buy Now
+        </button>
+      </div>
+    </div>
+    <div class="bg-white p-6 rounded-md shadow-md">
+      <img
+        src="static\images\mouse.jpg"
+        alt="Ryzen 7 3700X"
+        class="w-full object-cover mb-4 rounded-md"
+      />
+      <h2 class="text-xl font-semibold mb-2">Logitech G203 Mouse</h2>
+      <p class="text-gray-600 mb-4">
+        Logitech Gamer Mouse G203 RGB Lightsync with 8000 DPI.
+      </p>
+      <p class="text-lg text-purple-600 mb-4">$79.99</p>
+      <div class="flex space-x-4">
+        <button
+          class="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 focus:outline-none focus:ring focus:border-purple-700"
+        >
+          Add to Cart
+        </button>
+        <button
+          class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 focus:outline-none focus:ring focus:border-green-700"
+        >
+          Buy Now
+        </button>
+      </div>
+    </div>
+    <div class="bg-white p-6 rounded-md shadow-md">
+      <img
+        src="static\images\monitor.jpg"
+        alt="16 Gb Ram"
+        class="w-full object-cover mb-4 rounded-md"
+      />
+      <h2 class="text-xl font-semibold mb-2">21inch Monitor</h2>
+      <p class="text-gray-600 mb-4">
+        Generic 21 inch professional monitor by HP.
+      </p>
+      <p class="text-lg text-purple-600 mb-4">$135.99</p>
+      <div class="flex space-x-4">
+        <button
+          class="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 focus:outline-none focus:ring focus:border-purple-700"
+        >
+          Add to Cart
+        </button>
+        <button
+          class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 focus:outline-none focus:ring focus:border-green-700"
+        >
+          Buy Now
+        </button>
+      </div>
+    </div>
+    <!-- Repeat the above structure for each product -->
+  </div>
 </div>
 {% endblock %}
