@@ -11,9 +11,10 @@ from flask_login import login_required, current_user
 # Create a Blueprint named 'views'
 views = Blueprint('views', __name__)
 
+
 @views.route('/')
 def home():
-    """
+  """
     Home route.
 
     Renders the home page template with the current user information.
@@ -21,11 +22,12 @@ def home():
     Returns:
         str: Rendered HTML template for the home page.
     """
-    return render_template('home.html', user=current_user)
+  return render_template('home.html', user=current_user)
+
 
 @views.route('/about')
 def about():
-    """
+  """
     About route.
 
     Renders the about page template with the current user information.
@@ -33,12 +35,13 @@ def about():
     Returns:
         str: Rendered HTML template for the about page.
     """
-    return render_template('about.html', user=current_user)
+  return render_template('about.html', user=current_user)
+
 
 @views.route('/admin-panel')
 @login_required
 def admin():
-    """
+  """
     Admin panel route.
 
     Renders the admin panel page template with the current user information.
@@ -47,4 +50,19 @@ def admin():
     Returns:
         str: Rendered HTML template for the admin panel page.
     """
-    return render_template('admin_panel.html', user=current_user)
+  return render_template('admin_panel.html', user=current_user)
+
+
+@views.route('/cart')
+@login_required
+def cart():
+  """
+    Admin panel route.
+  
+    Renders the admin panel page template with the current user information.
+    Requires the user to be logged in.
+  
+    Returns:
+        str: Rendered HTML template for the admin panel page.
+    """
+  return render_template('cart.html', user=current_user)
