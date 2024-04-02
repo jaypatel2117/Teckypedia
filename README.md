@@ -1,3 +1,9 @@
+# Case Study
+Rahul Gupta
+Kushal Nishad
+Jay Patel
+Harshit Morwal.
+
 # Teckypedia
 
 Teckypedia is an e-commerce web application built with Python Flask framework and styled using Tailwind CSS. It serves as a platform for purchasing computer spare parts online. Whether you're looking for a new graphics card, motherboard, CPU, or any other component, Teckypedia provides a convenient way to browse, compare, and purchase computer parts from the comfort of your home.
@@ -29,7 +35,7 @@ To get started with Teckypedia locally, follow these steps:
 2. Navigate to the project directory.
 3. Install the required dependencies by running `pip install -r requirements.txt`.
 4. Start the Flask development server by running `python app.py`.
-5. Open your web browser and navigate to `http://localhost:5000` to view the application.
+5. Open your web browser and navigate to `http://0.0.0.0:5000` to view the application.
 
 ## Contributing
 
