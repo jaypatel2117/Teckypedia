@@ -2,7 +2,7 @@
 Rahul Gupta
 Kushal Nishad
 Jay Patel
-Harshit Morwal
+Harshit Morwal.
 
 # Teckypedia
 
