@@ -1,3 +1,5 @@
+#Case Study
+
 # Teckypedia
 
 Teckypedia is an e-commerce web application built with Python Flask framework and styled using Tailwind CSS. It serves as a platform for purchasing computer spare parts online. Whether you're looking for a new graphics card, motherboard, CPU, or any other component, Teckypedia provides a convenient way to browse, compare, and purchase computer parts from the comfort of your home.

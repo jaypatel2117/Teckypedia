@@ -57,8 +57,7 @@ def admin():
 @login_required
 def cart():
   """
-    Admin panel route.
-  
+    Cart route.
     Renders the admin panel page template with the current user information.
     Requires the user to be logged in.
   
@@ -66,3 +65,17 @@ def cart():
         str: Rendered HTML template for the admin panel page.
     """
   return render_template('cart.html', user=current_user)
+
+
+@views.route('/product')
+def product():
+  """
+  Product route.
+
+  Renders the admin panel page template with the current user information.
+  Requires the user to be logged in.
+
+  Returns:
+      str: Rendered HTML template for the admin panel page.
+  """
+  return render_template('product.html', user=current_user)
