@@ -1,5 +1,5 @@
 # Use the official Python image as the base image
-FROM python:3.11.9-slim
+FROM circleci/python
 
 
 # Set the working directory inside the container
