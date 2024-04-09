@@ -1,0 +1,117 @@
+{% extends "base.html" %} {% block title %}Checkout{% endblock %} {% block
+content %}
+<div class="container mx-auto px-4 py-8">
+  <div class="bg-white rounded-lg shadow-lg p-8 flex space-x-8">
+    <!-- Product Summary -->
+    <div class="w-1/2">
+      <h2 class="text-2xl font-bold mb-4">Product Summary</h2>
+      <!-- Sample items from the cart -->
+      <div
+        class="flex items-center justify-between border-b border-gray-200 py-2"
+      >
+        <div class="flex items-center">
+          <img
+            src="https://via.placeholder.com/40"
+            alt="Product Image"
+            class="w-16 h-16 mr-4"
+          />
+          <div>
+            <p class="font-semibold">Product Name</p>
+            <p class="text-gray-600">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+              minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+        </div>
+        <p class="font-semibold">$49.99</p>
+      </div>
+      <!-- Additional items from the cart -->
+      <!-- Repeat this block for each item in the cart -->
+    </div>
+
+    <!-- Checkout Form -->
+    <div class="w-1/2">
+      <form
+        class="bg-gray-100 p-8 rounded-md shadow-lg bg-gradient-to-r from-purple-100 to-blue-100"
+      >
+        <h2 class="text-2xl font-bold text-gray-600 mb-4">Checkout</h2>
+
+        <!-- Payment form fields -->
+        <div class="space-y-6">
+          <div>
+            <label
+              for="card-number"
+              class="block text-sm font-medium text-gray-600"
+              >Card Number</label
+            >
+            <input
+              id="card-number"
+              name="card-number"
+              type="number"
+              autocomplete="card-number"
+              class="w-full p-2 rounded-md border-0 py-2 text-gray-600 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-purple-600 sm:text-sm"
+              max="9999999999999999"
+            />
+          </div>
+          <div>
+            <label for="expiry" class="block text-sm font-medium text-gray-600"
+              >Expiry Date</label
+            >
+            <input
+              type="text"
+              id="expiry"
+              name="expiry"
+              class="w-full p-2 rounded-md border-0 py-2 text-gray-600 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-purple-600 sm:text-sm"
+              pattern="\d{2}/\d{2}"
+              placeholder="MM/YY"
+              title="Enter a valid expiration date (MM/YY)"
+            />
+          </div>
+          <div>
+            <label for="cvv" class="block text-sm font-medium text-gray-600"
+              >CVV</label
+            >
+            <input
+              type="number"
+              id="cvv"
+              name="cvv"
+              class="w-full p-2 rounded-md border-0 py-2 text-gray-600 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-purple-600 sm:text-sm"
+              max="999"
+            />
+          </div>
+          <div>
+            <label
+              for="name-on-card"
+              class="block text-sm font-medium text-gray-600"
+              >Name on Card</label
+            >
+            <input
+              type="text"
+              id="name-on-card"
+              name="name-on-card"
+              class="w-full p-2 rounded-md border-0 py-2 text-gray-600 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-purple-600 sm:text-sm"
+              maxlength="50"
+            />
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+      </form>
+      <div class="mt-6">
+        <button
+          type="submit"
+          class="w-full bg-purple-600 text-gray-50 hover:bg-purple-700 focus:outline-none focus:ring focus:border-purple-700 p-2 px-4 sm:px-5 rounded-md"
+        >
+          <a href="/order_confirmation">Checkout</a>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

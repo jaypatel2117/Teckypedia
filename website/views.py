@@ -72,10 +72,37 @@ def product():
   """
   Product route.
 
-  Renders the admin panel page template with the current user information.
+  Renders the product page template with to show the detailed information     about the product.
+
+  Returns:
+      str: Rendered HTML template for the product page.
+  """
+  return render_template('product.html', user=current_user)
+
+
+@views.route('/checkout')
+def checkout():
+  """
+  Checkout route.
+
+  Renders the checkout page with add and edit options.
   Requires the user to be logged in.
 
   Returns:
-      str: Rendered HTML template for the admin panel page.
+      str: Rendered HTML template for the checkout page.
   """
-  return render_template('product.html', user=current_user)
+  return render_template('checkout.html', user=current_user)
+
+
+@views.route('/order_confirmation')
+def order_confirmation():
+  """
+  Checkout route.
+
+  Renders the checkout page with add and edit options.
+  Requires the user to be logged in.
+
+  Returns:
+      str: Rendered HTML template for the checkout page.
+  """
+  return render_template('order_confirmation.html', user=current_user)
