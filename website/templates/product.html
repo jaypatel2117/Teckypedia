@@ -4,19 +4,23 @@ content %}
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
     <div>
       <img
-        src="{{ product_image }}"
-        alt="{{ product_name }}"
+        src="https://via.placeholder.com/400x300"
+        alt="Product Image"
         class="w-full object-cover mb-4 rounded-md shadow-md"
       />
     </div>
     <div>
-      <h1 class="text-3xl font-semibold mb-4">{{ product_name }}</h1>
-      <p class="text-gray-600 mb-4">{{ product_description }}</p>
-      <p class="text-lg text-purple-600 mb-4">{{ product_price }}</p>
+      <h1 class="text-3xl font-semibold mb-4">Product Name</h1>
+      <p class="text-gray-600 mb-4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget
+        ultricies mi. Vivamus dignissim vehicula odio, non suscipit dui luctus
+        non.
+      </p>
+      <p class="text-lg text-purple-600 mb-4">$49.99</p>
       <button
         class="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 focus:outline-none focus:ring focus:border-purple-700"
       >
-        Add to Cart
+        <a href="/cart">Add to Cart</a>
       </button>
     </div>
   </div>
