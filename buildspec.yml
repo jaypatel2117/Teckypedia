@@ -6,7 +6,7 @@ env:
      AWS_ACCOUNT_ID: "767397866467"
 
 phases:
-  #install:
+  #install:1
     #runtime-versions:
       #docker: 20 
   pre_build:
