@@ -1,27 +1,31 @@
 version: 0.2
+env:
+  variables:
+     AWS_DEFAULT_REGION: "us-east-1"
+     IMAGE_REPO_NAME: "teckypedia"
+     AWS_ACCOUNT_ID: "767397866467"
 
 phases:
-  install:
-    runtime-versions:
-      python: 3.12
-    commands:
-      - echo "Installing Docker"
-      - apt update && apt install -y docker.io
-      - echo "Docker installed successfully"
-      - echo "Installing AWS CLI"
-      - apt install -y awscli
-      - echo "AWS CLI installed successfully"
+  #install:
+    #runtime-versions:
+      #docker: 20
   pre_build:
     commands:
-      - echo "Logging in to Amazon ECR"
-      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 767397866467.dkr.ecr.us-east-1.amazonaws.com
+      - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
+      - IMAGE_TAG=${COMMIT_HASH:=latest}
+      - echo Logging in to Amazon ECR...
+      - $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
   build:
     commands:
-      - echo "Building Docker image"
-      - docker build -t teckypedia .
-      - echo "Tagging Docker image"
-      - docker tag teckypedia:latest 767397866467.dkr.ecr.us-east-1.amazonaws.com/teckypedia:latest
+      - echo Build started on `date`
+      - echo Building the Docker image...          
+      - docker build -t $IMAGE_REPO_NAME:$IMAGE_TAG .
+      - docker tag $IMAGE_REPO_NAME:$IMAGE_TAG $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
   post_build:
     commands:
-      - echo "Pushing Docker image to Amazon ECR"
-      - docker push 767397866467.dkr.ecr.us-east-1.amazonaws.com/teckypedia:latest
+      - echo Build completed on `date`
+      - echo Pushing the Docker image...
+      - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
+      - printf '[{"name":"PY-APP","imageUri":"%s"}]' $CONTAINER_NAME $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG > imagedefinitions.json
+artifacts:
+    files: imagedefinitions.json
