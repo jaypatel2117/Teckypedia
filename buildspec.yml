@@ -2,7 +2,7 @@ version: 0.2
 env:
   variables:
      AWS_DEFAULT_REGION: "us-east-1"
-     IMAGE_REPO_NAME: "teckypedia"
+     IMAGE_REPO_NAME: "teckypedia" 
      AWS_ACCOUNT_ID: "767397866467"
 
 phases:
