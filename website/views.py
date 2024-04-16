@@ -1,5 +1,5 @@
 """
-Authors: Rahul and Harshit
+Authors: Rahul
 Created: 7th Dec, 2023
 Modified: 15th Dec, 2023
 Description: Blueprint for defining views and rendering templates for the Techypedia e-commerce website.
